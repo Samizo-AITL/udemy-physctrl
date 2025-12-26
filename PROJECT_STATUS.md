@@ -20,7 +20,7 @@ It is intended as a **pause / resume anchor** for the author.
 - Scope: Physical-model-based control design (PID / FSM)
 
 ### Structure
-The lecture-oriented structure is established and validated:
+The lecture-oriented structure is **fully established and validated**:
 
 ```text
 00_intro        # Motivation and design philosophy
@@ -30,19 +30,23 @@ The lecture-oriented structure is established and validated:
 assets          # Figures and diagrams
 ```
 
-Each directory contains its own `README.md` as a lecture anchor.
+Each directory contains:
+- `README.md` : learner-facing lecture anchor  
+- `SCRIPT_*.md` : instructor-facing Udemy recording script  
 
 ---
 
 ### Execution Status (Important)
 
-- ✅ **01_pid/pid_sim.py implemented**
+- ✅ **01_pid/pid_sim.py implemented and frozen**
 - ✅ Script executes successfully and produces a step response plot
 - ✅ Minimal PID example confirmed to “move and respond”
-- ✅ `01_pid/README.md` updated as an execution guide
-- ✅ Changes committed and pushed to GitHub (`main`)
+- ✅ `02_fsm/` implemented with minimal FSM examples
+- ✅ `03_phys_model/` implemented with nonlinear, saturation, and V–I intuition models
+- ✅ All scripts execute correctly and demonstrate intended behavior
+- ✅ All changes committed and pushed to GitHub (`main`)
 
-The repository is now **executable, reproducible, and learner-ready**.
+The repository is now **executable, reproducible, and recording-ready**.
 
 ---
 
@@ -59,20 +63,26 @@ The repository is now **executable, reproducible, and learner-ready**.
 ### Why control comes first
 - Immediate feedback via simulation and plots
 - Low entry cost for Udemy learners
-- Control is treated as a **design tool**, not parameter tuning
+- Control is treated as a **design activity**, not parameter tuning
 
-### Why physical models come later
+### Why FSM is introduced next
+- PID is not always sufficient in all operating conditions
+- FSM is positioned as a **supervisory decision layer**
+- Focus is on *why switching is needed*, not on formal FSM theory
+
+### Why physical models come last
 - Physics and semiconductor concepts are introduced
   as **constraints and structure**, not prerequisites
 - V–I characteristics are treated as control objects
-- Nonlinearity is presented conceptually before equations
+- Nonlinearity and saturation are presented **without equations**
 
-### What is intentionally excluded (for now)
+### What is intentionally excluded
 - Detailed semiconductor device physics
 - AI / LLM topics
 - Heavy mathematical formalism
+- Complex control theory extensions
 
-These are postponed to keep the course **finish-able and executable**.
+These are excluded to keep the course **finish-able, executable, and intuitive**.
 
 ---
 
@@ -84,72 +94,87 @@ These are postponed to keep the course **finish-able and executable**.
   - Extended theory
   - Advanced and exploratory content
 
-This repo prioritizes **execution, intuition, and continuity**.
+This repo prioritizes **execution, intuition, and continuity** over completeness.
 
 ---
 
 ## 4. Completed Actions (Milestones Reached)
 
 ### ✔ Priority 1 — Completed
-A **single clean working example** has been created:
+A **single clean working baseline** has been established:
 
 - Location: `01_pid/`
 - File: `pid_sim.py`
-- Features:
-  - Step response
-  - Clear variable naming
-  - Simple plotting
+- Status: **Frozen reference**
+- Role: Baseline executable for the entire course
 
 Result:
 > The course demonstrably “moves and responds”.
 
-This serves as the **baseline executable reference** for the entire course.
+---
+
+### ✔ Priority 2 — Completed
+FSM layer implemented and validated:
+
+- Location: `02_fsm/`
+- Focus: Mode selection and supervisory logic
+- Implementation:
+  - `fsm_basic.py`
+  - `fsm_with_pid.py`
+- Emphasis: Role separation (PID vs FSM)
 
 ---
 
-## 5. Immediate Next Actions (When resuming)
+### ✔ Priority 3 — Completed
+Physical model intuition layer implemented:
 
-### Priority 1 — Stabilize the Baseline
-- Treat `01_pid/pid_sim.py` as a **frozen reference**
-- Do not modify it directly
-- Add variants as separate files if needed:
+- Location: `03_phys_model/`
+- Topics:
+  - Nonlinearity
   - Saturation
-  - Faster response
-  - Noise / disturbance
+  - V–I characteristics
+- Implementation:
+  - `nonlinear_element.py`
+  - `saturation_model.py`
+  - `vi_curve_demo.py`
+
+FSM necessity is fully justified by physical constraints.
 
 ---
 
-### Priority 2 — Refine `00_intro/README.md`
-Limit to **three core messages** only:
+### ✔ Priority 4 — Completed
+Udemy recording scripts prepared:
 
-- Control is a design activity
-- Physical models define structure and constraints
-- FSM acts as a supervisory decision layer
+- `SCRIPT_00_intro.md`
+- `SCRIPT_01_pid.md`
+- `SCRIPT_02_fsm.md`
+- `SCRIPT_03_phys_model.md`
 
-No equations. No implementation details.
-
----
-
-### Priority 3 — Develop `02_fsm/`
-- Introduce FSM as a **mode-selection layer**
-- Start from simple conditional logic
-- Emphasize *why* switching is needed, not how complex it is
+Each script is:
+- Recording-ready
+- README-aligned
+- Designed for natural spoken delivery
 
 ---
 
-### Priority 4 — Keep `03_phys_model/` lightweight
-- Nonlinearity
-- Saturation
-- V–I curve intuition
-- No device equations at this stage
+## 5. Current Next Actions (Optional)
+
+### Priority 1 — Udemy Recording
+- Use GitHub repository as **visual map**
+- Perform execution and explanation locally (VS Code)
+- Scripts act as instructor teleprompter
+
+### Priority 2 — Optional Refinement
+- Minor wording adjustments in README or scripts
+- No technical expansion recommended
 
 ---
 
-## 6. Slides (Marp) – Deferred Decision
+## 6. Slides (Marp) – Deferred by Design
 
-- Marp-based HTML slides are **not required at this stage**
-- Option to add later under `slides/`
-- Decision to be revisited after lecture flow stabilizes
+- Marp-based HTML slides are **intentionally omitted**
+- Repository-first, execution-first approach is prioritized
+- Slides may be added later **only if needed**
 
 ---
 
@@ -165,4 +190,4 @@ This repository is successful if:
 
 ---
 
-_End of current checkpoint._
+_End of current checkpoint (Updated)._  
