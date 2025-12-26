@@ -1,87 +1,81 @@
-## 🚀 ChatGPT-Accelerated-Designs
+---
+title: udemy-physctrl
+author: Samizo-AITL
+---
 
-Welcome to the ChatGPT-Accelerated-Designs repository.  
-This project demonstrates how large-scale hardware specification and system design can be rapidly created and documented using ChatGPT as an AI design co-pilot.  
-Over the course of just four days, we generated a complete set of detailed design specifications — including 26 modular components spanning semiconductors, embedded systems, and educational platforms.
+# udemy-physctrl
+
+This repository is the **official companion repository** for the Udemy course:
+
+> **Physical Model–Based Control Design**  
+> *From V–I Characteristics to PID and FSM Implementation*
 
 ---
 
-## 🌐 Project Scope
+## 🎯 Purpose
 
-This repository is intended for:  
-- 🧠 Engineers looking to accelerate technical document creation  
-- 🏫 Educators exploring AI-assisted PoC kits and teaching tools  
-- 🔧 Developers prototyping complex modular systems  
-- 🧪 Researchers investigating AI-human collaborative workflows
+This course and repository focus on **control as a design tool**, not just tuning.
 
----
+- Start from **physical and V–I models**
+- Design **PID controllers** based on dynamics
+- Extend to **FSM-supervised control**
+- Understand how control compensates **nonlinearity, saturation, and variation**
 
-## 🧩 Sky-HyEV: Flagship Example
-
-The Sky-HyEV system is a three-tier modular hardware platform designed entirely with ChatGPT assistance.
-
-| Model        | Modules | Key Features                                        |
-|--------------|---------|---------------------------------------------------|
-| Standard     | 8       | Entry-level modular specs                          |
-| Professional | 11      | PoC/RTOS/SystemDK-ready integration                |
-| Military     | 7       | High-reliability, EMP-tolerant design, Education PoC mode |
-
-Each module was defined using structured prompt templates, enabling rapid and repeatable specification generation.  
-👉 Explore: /Sky-HyEV/
+This approach naturally connects **physics, devices, and control**.
 
 ---
 
-## 🧠 How We Generated 26 Specs in 4 Days
+## 📂 Repository Structure
 
-The key to rapid generation was a three-part strategy:  
-1. **Modular Design Granularity**  
-   Each hardware block (e.g., AI chip, MRAM, camera, power) was isolated into a manageable, spec-driven unit.  
-2. **Prompt Engineering**  
-   Reusable templates defined:  
-   - Scope of each module  
-   - Output expectations (diagrams, tables, flowcharts)  
-   - Design priorities (power, cost, reliability)  
-   See: /Sky-HyEV/prompts/  
-3. **Workflow Consistency**  
-   A single module spec could be produced in 30–40 minutes using ChatGPT, with minimal iteration.
-
----
-
-## ✨ Key Highlights
-
-- **Rapid Specification Creation:** Leveraging ChatGPT, we generated over 20 detailed engineering specifications for complex semiconductor and embedded systems within just four days.  
-- **Modular & Scalable Prompts:** Custom prompt templates enabled consistent, repeatable output across diverse hardware modules and model tiers (Standard, Professional, Military).  
-- **Quality & Depth:** Specifications include block diagrams, performance metrics, interface definitions, and environmental considerations, reflecting real engineering rigor.  
-- **Proof-of-Concept & Education:** Beyond specs, we produced PoC materials and educational content, showcasing AI’s role in accelerating R&D and training.  
-- **Open-Source Repository:** All documents and workflows are publicly available, demonstrating transparent and reproducible AI-assisted engineering design.
-
----
-
-## 📁 Repository Structure
+```text
+udemy-physctrl/
+├─ 00_intro/        # Concept and motivation
+├─ 01_pid/          # PID basics and simulations
+├─ 02_fsm/          # FSM-based supervision
+├─ 03_phys_model/   # V–I and nonlinear models
+├─ assets/          # Figures and diagrams
+├─ requirements.txt
+└─ README.md
 ```
-/Sky-HyEV/  
-│  
-├── /StandardModel/        # 8 entry-level spec documents  
-├── /ProfessionalModel/    # 11 advanced design specs  
-├── /MilitaryModel/        # 7 high-reliability & educational modules  
-├── /prompts/              # Prompt templates used for generation  
-└── /examples/             # (Optional) Spec document examples
+
+Each directory corresponds to **one lecture block** in the Udemy course.
+
+---
+
+## 🧠 Design Philosophy
+
+- Control is not isolated mathematics  
+- **Physical models define control structure**
+- V–I characteristics are treated as **control objects**
+- FSM handles **mode transitions and constraints**
+
+This philosophy is part of the broader **Samizo-AITL** framework.
+
+👉 For extended materials and advanced topics, visit:  
+**https://samizo-aitl.github.io/**
+
+---
+
+## 🛠 Environment
+
+- Python 3.x
+- NumPy
+- Matplotlib
+
+```bash
+pip install -r requirements.txt
 ```
----
-
-## 🔄 Reproducibility
-
-All modules can be regenerated using their original prompt templates.  
-Engineers and educators are encouraged to fork the repository and extend the templates for their own systems.
 
 ---
 
-## ✍️ Authors & Collaborators
+## 📜 License
 
-This project was developed by [Your Name or Team] using ChatGPT-4, with all prompts, responses, and specifications curated over a four-day collaborative process.
+This repository is provided for **educational purposes** as part of a Udemy course.
+Reuse and modification are allowed for learning and personal projects.
 
 ---
 
-## 📫 Contact
+## ✍ Author
 
-For inquiries or collaboration, please reach out via GitHub Issues or [shin3t72@gmail.com].
+**Samizo-AITL**  
+Physical systems · Semiconductor devices · Control · Intelligence
