@@ -20,7 +20,7 @@ It is intended as a **pause / resume anchor** for the author.
 - Scope: Physical-model-based control design (PID / FSM)
 
 ### Structure
-The initial lecture-oriented structure is established:
+The lecture-oriented structure is established and validated:
 
 ```text
 00_intro        # Motivation and design philosophy
@@ -32,31 +32,47 @@ assets          # Figures and diagrams
 
 Each directory contains its own `README.md` as a lecture anchor.
 
+---
+
+### Execution Status (Important)
+
+- ✅ **01_pid/pid_sim.py implemented**
+- ✅ Script executes successfully and produces a step response plot
+- ✅ Minimal PID example confirmed to “move and respond”
+- ✅ `01_pid/README.md` updated as an execution guide
+- ✅ Changes committed and pushed to GitHub (`main`)
+
+The repository is now **executable, reproducible, and learner-ready**.
+
+---
+
 ### Environment
 - Python-based
 - Minimal dependencies
 - `requirements.txt` is created and committed
+- Verified on a clean local Python environment
 
 ---
 
 ## 2. Design Decisions (Why it looks like this)
 
-### Why control first
+### Why control comes first
 - Immediate feedback via simulation and plots
 - Low entry cost for Udemy learners
-- Control is treated as a **design tool**, not tuning
+- Control is treated as a **design tool**, not parameter tuning
 
 ### Why physical models come later
 - Physics and semiconductor concepts are introduced
   as **constraints and structure**, not prerequisites
 - V–I characteristics are treated as control objects
+- Nonlinearity is presented conceptually before equations
 
 ### What is intentionally excluded (for now)
-- Detailed semiconductor physics
+- Detailed semiconductor device physics
 - AI / LLM topics
-- Excessive mathematics
+- Heavy mathematical formalism
 
-These are postponed to keep the course **finish-able**.
+These are postponed to keep the course **finish-able and executable**.
 
 ---
 
@@ -68,14 +84,14 @@ These are postponed to keep the course **finish-able**.
   - Extended theory
   - Advanced and exploratory content
 
-This repo prioritizes **execution and experience**.
+This repo prioritizes **execution, intuition, and continuity**.
 
 ---
 
-## 4. Immediate Next Actions (When resuming)
+## 4. Completed Actions (Milestones Reached)
 
-### Priority 1
-Create a **single clean working example**:
+### ✔ Priority 1 — Completed
+A **single clean working example** has been created:
 
 - Location: `01_pid/`
 - File: `pid_sim.py`
@@ -84,35 +100,60 @@ Create a **single clean working example**:
   - Clear variable naming
   - Simple plotting
 
-Goal: Prove that the course “moves and responds”.
+Result:
+> The course demonstrably “moves and responds”.
 
-### Priority 2
-Refine `00_intro/README.md`:
+This serves as the **baseline executable reference** for the entire course.
 
-- Limit to 3 core messages:
-  - Control is design
-  - Physical models define structure
-  - FSM is a supervisory layer
+---
 
-### Priority 3
-Keep `03_phys_model/` lightweight:
+## 5. Immediate Next Actions (When resuming)
 
+### Priority 1 — Stabilize the Baseline
+- Treat `01_pid/pid_sim.py` as a **frozen reference**
+- Do not modify it directly
+- Add variants as separate files if needed:
+  - Saturation
+  - Faster response
+  - Noise / disturbance
+
+---
+
+### Priority 2 — Refine `00_intro/README.md`
+Limit to **three core messages** only:
+
+- Control is a design activity
+- Physical models define structure and constraints
+- FSM acts as a supervisory decision layer
+
+No equations. No implementation details.
+
+---
+
+### Priority 3 — Develop `02_fsm/`
+- Introduce FSM as a **mode-selection layer**
+- Start from simple conditional logic
+- Emphasize *why* switching is needed, not how complex it is
+
+---
+
+### Priority 4 — Keep `03_phys_model/` lightweight
 - Nonlinearity
 - Saturation
 - V–I curve intuition
-- No device equations yet
+- No device equations at this stage
 
 ---
 
-## 5. Slides (Marp) – Deferred Decision
+## 6. Slides (Marp) – Deferred Decision
 
 - Marp-based HTML slides are **not required at this stage**
 - Option to add later under `slides/`
-- Decision to be revisited after core lectures stabilize
+- Decision to be revisited after lecture flow stabilizes
 
 ---
 
-## 6. Guiding Principle Going Forward
+## 7. Guiding Principle Going Forward
 
 > Do not optimize for completeness.  
 > Optimize for **continuity and completion**.
