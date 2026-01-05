@@ -1,8 +1,3 @@
----
-title: "udemy-physctrl"
-description: "the official companion repository for the Udemy course"
----
-
 # udemy-physctrl
 
 This repository is the **official companion repository** for the Udemy course:
