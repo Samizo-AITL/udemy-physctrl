@@ -1,6 +1,6 @@
 ---
-title: udemy-physctrl
-author: Samizo-AITL
+title: "udemy-physctrl"
+description: "the official companion repository for the Udemy course"
 ---
 
 # udemy-physctrl
